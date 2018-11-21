@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!-- [if gt IE 8]> <html class="no-js"> <![endif] -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    <h1>My Creations </h1>
+    {{#drink_item}}
+   <h3> {{strdrink}}</h3>
+    <p>{{strcategory}}<p>
+    <p>{{strglass}}</p>
+    <img src='{{strdrinkthumb}}' width='250' height='325'>
+   <p> {{strinstructions}}</p>
+    <p>{{stringredient}}</p>
+    <h3>Comments</h3>
+    <form action ="/enter_comment" method="POST">
+    <input type = "text" name="enter_comment" placeholder="type a comment">
+    <input type ="hidden" name="iddrink" value="{{iddrink}}" >
+    <input type ="submit" value="Submit">
+    </form>
+    {{#drink_comment}}
+    <p>{{0}}</p>
+    <p>{{1}}</p>
+    <p>{{2}}</p>
+    {{/drink_comment}}
+    {{/drink_item}}
+
+
+        <script src="" async defer></script>
+    </body>
+</html>

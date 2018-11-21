@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Mixology Master</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg" style="background-color: black;">
+        <a class="navbar-brand" href="/"><img src="logo_scalable.png" class="logo"><img src="mixology_master.png" class="mixology_master"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Photo Master</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Upload Your Own</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+                </li> -->
+            </ul>
+            {{#username}}
+            <ul class="navbar-nav mr-right">
+            <!-- <li class="nav-item">
+            <p class="nav-link">{{username}}</p>
+            </li> -->
+            <li class="nav-item">
+            <form class="nav-link" action ='/logout' method="GET">
+            <input type="submit"  class="btn btn-primary" value="Logout">
+
+            </form>
+            {{/username}}
+            </li>
+            </ul>
+        {{#register}}
+<ul class="navbar-nav mr-right">
+
+
+      <!-- <li class="nav-item">
+          <a class="nav-link" href="/register">
+          Register
+          </a>
+      </li>
+             <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Login
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <form class="form-horizontal" action="/login" method="POST" accept-charset="UTF-8">
+                    <input class="form-control-login" type="text" name="username" placeholder="Username" size="25" >
+                    <input class="form-control-login" type="password" name="password" placeholder="Password" size="25" >
+                    <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+                </form>
+            </div>
+        </li> -->
+    </ul>
+          <li class="nav-item dropdown">
+              <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Login
+              </a> -->
+              <div class="dropdown-menu dropdown-menu-right">
+                  <form class="form-horizontal" action="/login" method="POST" accept-charset="UTF-8">
+                      <input class="form-control-login" type="text" name="username" placeholder="Username" size="25" >
+                      <input class="form-control-login" type="password" name="password" placeholder="Password" size="25" >
+                      <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+                  </form>
+              </div>
+          </li>
+          <li class="nav-item">
+          <form class="form-inline my-2 my-lg-0" action="/getCocktails" method="POST">
+          <input class="form-control mr-sm-2" type="search" placeholder="Enter Cocktail Name" aria-label="Search" name="query">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          </li>
+          <li class="nav-item">
+         <form class="nav-item" action ='/logout' method="GET">
+         <input type="submit"  class="btn btn-outline-success my-2 my-sm-0" value="Logout">
+         </form>
+         </li>
+      </ul>
+
+  </div></nav>
+{{/register}}
+        </div>
+    </nav>
+    <div id='bg'>
+        <img src="background.jpg">
+    </div>
+    <div id='main-container'>
+        <h1>Search results:</h1>
+         <form class="form-inline my-2 my-lg-0" action="/getCocktails" method="POST">
+     <input class="form-control mr-sm-2" type="search" placeholder="Enter Cocktail Name" aria-label="Search" name="query">
+     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+   </form>
+        {{#drinks}}
+
+        <div id="info-container">
+            <div id='drinkTitle'>
+                <h1>{{strDrink}}</h1>
+            </div>
+            <div id="info-box">
+                <div id="drinkInfo">
+                    <div id='ingredients'>
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            {{#drinkIngredients}}
+                            <li>
+                                <p>{{proportion}} {{ingredient}}</p>
+                            </li>
+                            {{/drinkIngredients}}
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+                <div id="drink-img">
+                    <img src="{{strDrinkThumb}}">
+                </div>
+
+            </div>
+             <div id='info-button'>
+                <form action="/getSingleCocktail" method="POST">
+                    <input type="hidden" name="drinkID" value="{{idDrink}}">
+                    <input class="btn btn-primary" type="submit" value="Get More Info">
+                </form>
+            </div>
+
+
+        </div>
+
+        {{/drinks}}
+        <div id='bg'>
+            <img src="background.jpg">
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+
+</html>
