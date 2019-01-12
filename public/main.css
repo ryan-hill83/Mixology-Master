@@ -75,8 +75,9 @@ z-index: -1;
 
 #instructions{
     text-align: left;
-    width: 500px;
+    width: 320px;
 }
+
 #info-box {
   display: flex;
   border-top: 3px double gray;
@@ -93,6 +94,12 @@ z-index: -1;
   width: 200px;
   margin-right: 5%;
   /* height: 55%; */
+}
+
+#drink-img img {
+  width: 250px;
+  height: 250px;
+  margin-top: 1em;
 }
 
 #drinkInfo ul {
@@ -120,17 +127,6 @@ z-index: -1;
   margin-right: auto;
 }
 
-#drink-img{
-  justify-content: center;
-
-}
-
-#drink-img img {
-  width: 400px;
-  height: 400px;
-
-
-}
 
 #drink-title-main{
   text-align: center;
@@ -165,11 +161,6 @@ z-index: -1;
   padding-bottom: 10px;
 }
 
-#drink-img img {
-  width: 250px;
-  height: 250px;
-  margin-top: 1em;
-}
 
 #drink-title-main{
   text-align: center;
@@ -183,9 +174,9 @@ z-index: -1;
   display: flex;
   flex-direction: column;
   padding: 15px;
-
-
 }
+
+
 #ingredients{
   position: relative;
 }
@@ -335,11 +326,6 @@ z-index: -1;
     margin-left: 2px
   }
 
-  #drink-img img {
-    width: 250px;
-    height: 250px;
-    margin-top: 1em;
-  }
 
   #info-container {
     display: flex;
@@ -457,8 +443,22 @@ z-index: -1;
 
 #createDrink {
   padding: 20px;
-  margin: 20px;
+  text-align: center;
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
 }
+
+.dashboardContainer{
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.registerContainer{ margin-left: 15px;}
 
 ul li{
     list-style-type: none;
