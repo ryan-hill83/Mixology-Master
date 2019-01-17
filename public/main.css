@@ -42,6 +42,14 @@ h3, h5, h4, p, li , .col-sm {
 
 }
 
+.topmargin{
+  margin-top: 3px;
+}
+
+textarea {
+  resize: none;
+}
+
 .navbar {padding-top:1px !important; padding-bottom:1px !important;}
 
 body {

@@ -79,16 +79,16 @@
           <h5>Create a Drink</h5>
           <div id='form-input'>
             <form id="userDrinkInput" action="/createdrink" method="POST">
-              <input type="text" name="strdrink" value="" placeholder="Enter Drink Name" /><br>
-              <input type="text" name="strcategory" value="" placeholder="Enter Drink category" /><br>
-              <select name="glassSize"><br>
+              <input class="topmargin" type="text" name="strdrink" value="" placeholder="Enter Drink Name" /><br>
+              <input class="topmargin" type="text" name="strcategory" value="" placeholder="Enter Drink Category" /><br>
+              <select class="topmargin" name="glassSize"><br>
                 <option name="tall" value="Tall">Tall Glass</option><br>
                 <option name="cocktail_glass" value="cocktail_glass">Cocktail Glass</option><br>
                 <option name="small" value="Tall">Small Glass</option><br>
               </select><br>
-              <input type="text" name="strinstructions" value="" placeholder="Enter Instructions" /><br>
-              <input type="text" name="strdrinkthumb" value="" placeholder="Enter drink thumbnail image" /><br>
-              <input type="text" name="stringredient" value="" placeholder="Enter drink ingredients" /><br>
+              <textarea class="topmargin" rows="4" cols="50" name="strinstructions">Enter Instructions</textarea><br>
+              <input class="topmargin" type="text" name="strdrinkthumb" value="" placeholder="Enter drink thumbnail URL" size="40"/><br>
+              <textarea style="margin-top: 10px;" rows="4" cols="50" name="stringredient">Enter Ingredients</textarea><br>
               <input type="submit" value="Create">
             </form>
           </div>
