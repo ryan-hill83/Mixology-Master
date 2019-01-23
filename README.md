@@ -1,3 +1,13 @@
-This website allows bartenders or anyone else who is mixing craft cocktails to quickly search for the favorite drink recipes. User's can log in and also create their own recipes and save them. This project pulls from a public cocktail API.
+# Mixology Master
 
-This was created using HTML, CSS, Bootstrap, Node.js, Express.js, Mustache and PostgreSQL.
+Mixology master is a server side application that was built using HTML, CSS, Bootstrap, Node.js, Express.js, Mustache and PostgreSQL. This website/app allows bartenders or anyone else who is mixing craft cocktails to quickly search for their favorite drink recipes. This project pulls from a public cocktail API which allows users to search for hundreds of recipes. Users can create an account, save their own drink recipies and leave comments on any of the public drink recipe.
+
+### Live URL ###
+
+https://mixologymaster.herokuapp.com/ (May take some time to load as it is being hosted on a free account)
+
+
+### Screenshots ###
+
+
+
