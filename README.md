@@ -4,7 +4,7 @@ Mixology master is a server side application that was built using HTML, CSS, Boo
 
 ### Live URL ###
 
-https://mixologymaster.herokuapp.com/
+https://mixologymaster.herokuapp.com/ (May take some time to load as it is being hosted on a free account)
 
 
 ### Screenshots ###
